@@ -1,9 +1,9 @@
 package org.example.shapes;
 
-class Triangle extends Shape {
+class Triangle implements Shape {
     private int base, height, a, b, c;
 
-    // initialize it
+    // initialize it using a constructor
     public Triangle(int base, int height, int a, int b, int c){
         this.base = base;
         this.height = height;
@@ -15,12 +15,10 @@ class Triangle extends Shape {
     // le estoy pasando parametros que el metodo de la clase
     // abstracta no tiene. Ojo con ese error
 
-    @Override
-    double calculateArea(){
+    public double calculateArea(){
         return (double)(base * height) / 2;
     }
 
-    @Override
     public double calculatePerimeter(){
         return a + b + c;
     }
